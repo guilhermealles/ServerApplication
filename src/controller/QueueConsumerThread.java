@@ -2,8 +2,8 @@ package controller;
 
 import java.util.LinkedList;
 
-import view.Server;
 import model.QueueMessage;
+import view.Server;
 
 public class QueueConsumerThread extends Thread
 {
