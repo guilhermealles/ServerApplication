@@ -8,9 +8,9 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import base.DataRequestInterface;
-import base.DatabaseRequest;
-import base.RequestResponse;
+import rmi.base.DataRequestInterface;
+import rmi.base.DatabaseRequest;
+import rmi.base.RequestResponse;
 
 public class RequestToDatabaseController implements DataRequestInterface {
 
