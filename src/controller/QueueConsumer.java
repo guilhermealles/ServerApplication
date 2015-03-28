@@ -24,13 +24,14 @@ public class QueueConsumer
 	{
 		this.factory = new ConnectionFactory();
 		this.factory.setHost(RABBITMQ_SERVER_IP);		
-		
+
 		try 
 		{
-			this.connection = (Connection) this.factory.newConnection();
-			this.channel = (Channel) this.connection.createChannel();
-			this.consumer = new QueueingConsumer((com.rabbitmq.client.Channel) channel);
+			this.connection = this.factory.newConnection();
+			this.channel = this.connection.createChannel();
 			this.channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+			this.consumer = new QueueingConsumer(channel);
+			this.channel.basicConsume(QUEUE_NAME, true, consumer);
 			
 		} 
 		catch (IOException e) 
@@ -44,7 +45,6 @@ public class QueueConsumer
 	{
 		try
 		{
-			this.channel.basicConsume(QUEUE_NAME, true, consumer);
 			QueueingConsumer.Delivery delivery = this.consumer.nextDelivery();   
 		    
 			ByteArrayInputStream in = new ByteArrayInputStream(delivery.getBody());

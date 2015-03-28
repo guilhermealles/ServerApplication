@@ -26,7 +26,7 @@ public class Server
 		TCPSocketClient socket = new TCPSocketClient(TCPSocketClient.QUEUE_MESSAGE_SOCKET_PORT);
 	    socket.connect();
 	    socket.send(message_bytes);
-	    socket.close();  
+	    socket.close();
 	}
 	
 	public RequestResponse requestToDatabase (int operation_id)
