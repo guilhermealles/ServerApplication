@@ -22,7 +22,7 @@ public class RequestToDatabaseController implements DataRequestInterface {
 		DataInputStream in;
 		RequestResponse response = null;
 		try {
-			s = new Socket("192.168.0.104", 10001);
+			s = new Socket("192.168.0.102", 10001);
 			out = new DataOutputStream(s.getOutputStream());
 			ObjectOutputStream oos = new ObjectOutputStream(out);
 			oos.writeObject(request);

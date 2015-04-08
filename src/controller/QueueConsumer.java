@@ -13,7 +13,7 @@ import com.rabbitmq.client.QueueingConsumer;
 
 public class QueueConsumer
 {
-	private static final String RABBITMQ_SERVER_IP = "192.168.0.104";
+	private static final String RABBITMQ_SERVER_IP = "192.168.0.102";
 	private static final String QUEUE_NAME = "OUTLET_INFO_MESSAGES";
 	private ConnectionFactory factory;
 	private Connection connection;

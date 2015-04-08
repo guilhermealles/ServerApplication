@@ -39,7 +39,7 @@ public class Server
 	{
 		QueueConsumerThread queue_consumer_thread = new QueueConsumerThread();	
 		queue_consumer_thread.start();
-		
+		System.out.println("Starting RMI now...");
 		RMIThread rmi_thread = new RMIThread();
 		rmi_thread.start();
 	}

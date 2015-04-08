@@ -5,6 +5,5 @@
 	<classpathentry kind="lib" path="lib/rabbitmq-java-client-bin-3.5.0/commons-cli-1.1.jar"/>
 	<classpathentry kind="lib" path="lib/rabbitmq-java-client-bin-3.5.0/commons-io-1.2.jar"/>
 	<classpathentry kind="lib" path="lib/rabbitmq-java-client-bin-3.5.0/rabbitmq-client.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/RMI-Base"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
