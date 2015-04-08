@@ -13,7 +13,7 @@ import com.rabbitmq.client.QueueingConsumer;
 
 public class QueueConsumer
 {
-	private static final String RABBITMQ_SERVER_IP = "192.168.0.102";
+	private static final String RABBITMQ_SERVER_IP = "192.168.0.106";
 	private static final String QUEUE_NAME = "OUTLET_INFO_MESSAGES";
 	private ConnectionFactory factory;
 	private Connection connection;
@@ -50,9 +50,7 @@ public class QueueConsumer
 			ByteArrayInputStream in = new ByteArrayInputStream(delivery.getBody());
 			ObjectInputStream object_stream = new ObjectInputStream(in);
 			QueueMessage received_message = (QueueMessage)object_stream.readObject();
-			
-			System.out.println("... " + received_message.getOutletId() + ", " + received_message.getPowerConsumption());
-			
+						
 			return received_message;
 		}
 		catch (Exception e)

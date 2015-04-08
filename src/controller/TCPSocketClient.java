@@ -10,7 +10,7 @@ public class TCPSocketClient
 	public static final int QUEUE_MESSAGE_SOCKET_PORT = 10000;
 	public static final int DATABASE_REQUEST_SOCKET_PORT = 10001;
 	
-	private static String SERVER_ADDRESS = "192.168.0.102";	
+	private static String SERVER_ADDRESS = "192.168.0.106";	
 	private int SERVER_PORT;
 	private Socket socket;
 	private DataOutputStream out;

@@ -14,6 +14,8 @@ import rmi.base.RequestResponse;
 
 public class RequestToDatabaseController implements DataRequestInterface {
 
+	private static final String DATABASE_HOST_ADDRESS = "192.168.0.106";
+	
 	@Override
 	public RequestResponse executeRequest(DatabaseRequest request) throws Exception {
 		
@@ -22,7 +24,7 @@ public class RequestToDatabaseController implements DataRequestInterface {
 		DataInputStream in;
 		RequestResponse response = null;
 		try {
-			s = new Socket("192.168.0.102", 10001);
+			s = new Socket(DATABASE_HOST_ADDRESS, 10001);
 			out = new DataOutputStream(s.getOutputStream());
 			ObjectOutputStream oos = new ObjectOutputStream(out);
 			oos.writeObject(request);
