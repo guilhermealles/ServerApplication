@@ -4,7 +4,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.ObjectOutputStream;
 
 import model.QueueMessage;
-import model.RequestResponse;
+import rmi.base.RequestResponse;
 import controller.QueueConsumerThread;
 import controller.RMIThread;
 import controller.TCPSocketClient;
@@ -39,7 +39,6 @@ public class Server
 	{
 		QueueConsumerThread queue_consumer_thread = new QueueConsumerThread();	
 		queue_consumer_thread.start();
-		System.out.println("Starting RMI now...");
 		RMIThread rmi_thread = new RMIThread();
 		rmi_thread.start();
 	}
