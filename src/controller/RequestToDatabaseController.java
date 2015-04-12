@@ -35,8 +35,6 @@ public class RequestToDatabaseController implements DataRequestInterface {
 			in = new DataInputStream(s.getInputStream());
 			ObjectInputStream object_stream = new ObjectInputStream(in);
 			response = (RequestResponse)object_stream.readObject();
-			System.out.println("From server: ");
-			System.out.println(response.toString());
 		}
 		catch (UnknownHostException e) {
 			System.err.println(e);
