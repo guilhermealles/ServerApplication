@@ -4,7 +4,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.ObjectOutputStream;
 
 import model.QueueMessage;
-import rmi.base.RequestResponse;
 import controller.QueueConsumerThread;
 import controller.RMIThread;
 import controller.TCPSocketClient;
@@ -28,11 +27,6 @@ public class Server
 	    socket.connect();
 	    socket.send(message_bytes);
 	    socket.close();
-	}
-	
-	public RequestResponse requestToDatabase (int operation_id)
-	{
-		return new RequestResponse();
 	}
 	
 	public static void main (String args[])

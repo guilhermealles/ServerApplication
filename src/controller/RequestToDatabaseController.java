@@ -18,10 +18,9 @@ public class RequestToDatabaseController implements DataRequestInterface {
 	
 	@Override
 	public RequestResponse executeRequest(DatabaseRequest request) throws Exception {
-		
-		System.out.println("DEBUG> Received request, type= " + request.getType() + ", outlet= " + request.getOutlet());
-		
+				
 		// Create client socket to pass data to the database controller
+		// TODO implement this with TCPSocketClient?
 		Socket s = null;
 		DataOutputStream out;
 		DataInputStream in;

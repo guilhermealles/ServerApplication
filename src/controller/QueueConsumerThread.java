@@ -38,10 +38,7 @@ public class QueueConsumerThread extends Thread
 	{
 		// Main da thread
 		while (true)
-		{
-			System.out.println("Server is listening...");
-			
-			
+		{	
 			QueueMessage message = queue_consumer.consumeOnce();
 			this.addToBuffer(message);
 			System.out.println("Id: " + message.getOutletId() + " Power consumed: " + message.getPowerConsumption());
